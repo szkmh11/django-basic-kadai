@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load static %}  <!-- ここを追加 -->
+{% load static %}
 
 {% block title %}商品詳細{% endblock %}
 
@@ -22,12 +22,12 @@
         <td>{{ object.category.name }}</td>
         <td>
             {% if object.img %}
-                <img src="{% static object.img.url %}" alt="{{ object.name }}" width="100">
+                <img src="{{ object.img.url }}" alt="{{ object.name }}" width="100">
             {% else %}
                 <img src="{% static 'noImage.png' %}" alt="No Image" width="100">
             {% endif %}
         </td>
-        <td>{{ object.description }}</td> <!-- 追加された説明 -->
+        <td>{{ object.description }}</td> <!-- 商品詳細説明 -->
     </tr>
 </table>
 
